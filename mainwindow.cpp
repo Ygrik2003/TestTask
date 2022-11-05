@@ -67,7 +67,7 @@ void MainWindow::handlerSelectedSlot(QPoint cell)
 
     QPoint distance = selectedCell - cell;
 
-    if ((abs(distance.x() + distance.y()) == 1) && cells[cell.x()][cell.y()]->type != Type::Colored)
+    if (selectedCell != QPoint(-1, -1) && (abs(distance.x() + distance.y()) == 1) && cells[cell.x()][cell.y()]->type != Type::Colored)
     {
         swapCells(selectedCell, cell);
         if (checkWin())
