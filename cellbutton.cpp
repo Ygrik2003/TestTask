@@ -3,7 +3,7 @@
 
 CellButton::CellButton(Type type, QPoint position, Color color, QWidget *parent) : QPushButton(parent)
 {
-    setCellParams(type, position, color)
+    setCellParams(type, position, color);
 }
 
 void CellButton::setCellParams(Type type, QPoint position, Color color)
